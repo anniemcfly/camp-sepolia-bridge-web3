@@ -10,7 +10,7 @@ CAMP_CURRENCY_SYMBOL: str = "ETH"
 
 """Настройка SEPOLIA TESTNET"""
 
-SEPOLIA_NETWORK_RPC_URL: str = "https://rpc.sepolia.org/"
+SEPOLIA_NETWORK_RPC_URL: str = "https://ethereum-sepolia.blockpi.network/v1/rpc/public"
 SEPOLIA_CHAIN_ID: int = 11155111
 SEPOLIA_NETWORK_NAME: str = ""
 SEPOLIA_CURRENCY_SYMBOL: str = "ETH"
