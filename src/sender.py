@@ -1,6 +1,7 @@
 from web3 import Web3
 
 from src.gas import get_estimate_gas, get_base_fee
+from src.config import SEPOLIA_CHAIN_ID
 
 
 def send_from_camp_to_sepolia(to_address: str, amount, private_key: str, web3_: Web3):
@@ -37,6 +38,7 @@ def send_from_sepolia_to_camp(to_address: str, amount, private_key: str, web3_: 
         'nonce': nonce,
         'gas': get_estimate_gas(from_account.address, to_address, amount, web3_),
         'gasPrice': get_base_fee(web3_),
+        'chainId': SEPOLIA_CHAIN_ID
     }
 
     signed = web3_.eth.account.sign_transaction(transaction, private_key)
